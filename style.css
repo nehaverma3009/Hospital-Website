@@ -1,0 +1,375 @@
+/*common part*/
+body{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+a,a:hover{
+    text-decoration: none;
+}
+.mt-20px{
+    margin-top: 20px;
+}
+.border{
+    border-right: 1px solid grey;
+}
+.btn-green{
+    display: inline-block;
+    text-transform: capitalize;
+    font: 16px;
+    font-weight: 900;
+    color: aliceblue;
+    padding: 10px 30px;
+    border-radius: 2px;
+    position: relative;
+    border: 1px solid #01ca8b;
+    box-shadow: 0 0 0 4em #01ca8b inset;
+    transition: all 350ms ease;
+    margin-top: 13px;
+    margin-bottom: 21px;
+}
+.btn-green i{
+    margin-right: 6px;
+
+}
+.btn-green:hover{
+    box-shadow: 0 0 0 0 #01ca8b inset;
+    background: white;
+    color: #01ca8b;
+}
+.btn-transparent{
+    border: 1px solid white;
+}
+/*header part*/
+header{
+    position: absolute;
+    display: inline-block;
+
+    top: 0;
+    left: 0;
+    z-index:1;
+    width: 100%;
+    border-bottom: 1px solid white;
+    
+}
+.header-active{
+    position: fixed;
+    background: black;
+    z-index: 1;
+    top: 0;
+    animation-name: example;
+    animation-duration: 0.8s;
+}
+@keyframes example{
+    from{top: -200px;}
+    to{top: 0;}
+}
+.logo{
+    display: inline-block;
+    padding-right: 20px;
+    
+}
+.menu{
+    display: inline-block;
+}
+.menu ul{
+    padding: 0;
+    margin-top: 21px;
+
+}
+.menu ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 25px;
+}
+.menu ul li a{
+    color:#000;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0px;
+    margin-left: 5px;
+    position: relative;
+}
+.menu ul li a::before{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    transition: 0.2s ease-in-out;
+}
+.menu ul li a:hover::before{
+    width: 100%;
+}
+.header-social{
+    margin-top:21px ;
+}
+.header-social ul{
+    margin: 0;
+    padding: 0;
+}
+.header-social ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+.header-social ul li a{
+    color: white;
+    background:#01ca8b;
+    width: 41px;
+    font-size: 170%;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    
+    position: realtive;
+}
+.header-social ul li a:hover i{
+    color: #ca7301;
+}
+.header-socialul li a i{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+    font-size: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+/*banner part*/
+.banner{
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 16em 0 14em 0;
+    box-shadow: -5px -5px 30px 5px white 5px 5px 30px 5px white;
+}
+.banner-content{
+    width: 80%;
+}
+.banner-content h1{
+    color:#525151;
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    line-height: 80px;
+}
+.service{
+    border-radius: 10px;
+    background-color:#ffffff45;
+    border: 1px solid #dfdfdf94;
+    margin-top: 100px;
+}
+.service a{
+    display: inline-block;
+    width: 33%;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    border-right: 1px solid white;
+    padding: 34px 20px;
+    margin: 0 -2px;
+    height: 180px;
+    vertical-align: top;
+}
+.service a:first-child{
+    border-right: none;
+    background-image: url("https://pic.stonecontact.com/picture201511/natural-stone/dark-deep-blue-marble-tile-20746-1B.JPG");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 34.2%;
+    opacity: 0.9;
+}
+
+.service-content{
+    width: calc(100% - 47px);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.service-content::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background: #fff;
+    height: 2px;
+    width: 0;
+    transition: 0.2s ease-in-out;
+}
+.service a:hover .service-content::before{
+    width: 50%;
+}
+.service-btn{
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    background: #ffffff45;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: middle;
+}
+.service-btn i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in-out;
+}
+.service a:hover .service-btn i{
+    transform: rotate(-40deg);
+    top: 26%;
+    left: 32%;
+}
+.service-icon{
+    font-size: 40px;
+    margin-top: 22px;
+}
+.call{
+    display: inline-block;
+    width: 40px;
+    vertical-align: middle;
+}
+.call-number{
+    width: calc(100% - 54px);
+    display: inline-block;
+    vertical-align: middle;
+}
+.call-number p{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.call-number h3{
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+/*work*/
+.work{
+    position: relative;
+    margin-top: -80px;
+}
+.hours{
+    background: #01ca8b;
+    border-radius: 10px;
+    padding: 40px 50px;
+}
+.hours h2{
+    color: #fff;
+    font-weight: 900;
+    margin: 0 0 30px;
+}
+.time{
+    border-top: 1px solid rgb(255 255 255 / 0.52);
+    padding: 30px 0;
+}
+.time:last-child{
+    padding-bottom: 0;
+}
+.time h4 ,.time p{
+    text-align: left;
+    color: #fff;
+    font-weight: 600;
+}
+.booking{
+    display: inline-block;
+    width: 33%;
+    margin-left: -4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+.btn-white{
+    background: #fff;
+    color: #01ca8b;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding:4px 10px ;
+}
+.btn-white i{
+    margin-right:4px;
+}
+.response{
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+}
+.response-bg{
+    height: 260px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+.response a:hover .response-bg{
+    transform: scale(1.08);
+}
+.response-content{
+    padding: 90px 30px 30px;
+    text-align: left;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%,0% 100%);
+    background : #fff;
+    position: relative;
+    margin-top: -70px;
+}
+.response-icon{
+    background: #01ca8b;
+    border-radius: 2px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.response-icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+}
+.response-content h2{
+    color: #000;
+    font-weight: 800;
+    line-height: 36px;
+}
+.response-content p{
+    color: #8b8b8b;
+    font-size: 15px;
+    margin: 24px 0 0;
+}
+.read-more{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #01ca8b;
+    text-transform:uppercase ;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+.read-more i{
+    margin-left: 4px;
+    transition: 0.2s ease-in-out;
+}
+.response a:hover .read-more{
+    color: #000;
+}
+.response a:hover .read-more i{
+    color: #01ca8b;
+    margin-left: 6px;
+}
